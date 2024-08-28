@@ -10,3 +10,6 @@ Steps to Set Up:
 5. Click "Generate Report" to see the SMS Completion data for the date range you selected.
 
 If you need help finding your API Key, here's a guide that can help you find it: https://faq.hellosign.com/hc/en-us/articles/236400127-Where-to-find-your-API-Key
+
+Screenshot of Tool:
+![image](https://github.com/user-attachments/assets/91f92156-f246-4f17-8261-ebb56ad7c3c8)
