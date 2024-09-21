@@ -1,3 +1,5 @@
+**We recommend using this tool locally**
+Local Set-Up Instructions:
 This tool will calculate the completion rate of Signature Requests delivered via SMS within the specified date range. It does not include any data for non-sms based requests.
 This is an open-source tool that is not backed by any entity or assurances. Use it at your own discretion.
 
