@@ -54,7 +54,7 @@
 <br><br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const SMS_requests = [];
+        let SMS_requests = [];
         let currentPage = 1;
         const rowsPerPage = 25;
 
@@ -75,7 +75,7 @@
             let totalCompleted = 0;
             let totalSMSRequests = 0;
 
-            SMS_requests.length = 0;
+            SMS_requests = []; // Reset before loading new data
 
             while (true) {
                 const response = await fetch(`https://api.hellosign.com/v3/signature_request/list?page=${page}&page_size=100&query=${dateRange}`, {
@@ -192,9 +192,10 @@
                 pagination.appendChild(button);
             }
         }
+
         function downloadCSV() {
             const csvRows = [];
-            const headers = ['Title', 'Name', 'Email', 'Status', 'Completion', 'Date Signed', 'Time Signed'];
+            const headers = ['Title', 'Name', 'Email', 'Status', 'Signed On', 'Completion'];
             csvRows.push(headers.join(','));
 
             SMS_requests.forEach(item => {
@@ -203,8 +204,8 @@
                     item.name,
                     item.email,
                     item.status,
-                    item.isComplete ? 'Complete' : 'Incomplete',
                     item.signedOn,
+                    item.isComplete ? 'Complete' : 'Incomplete'
                 ];
                 csvRows.push(row.join(','));
             });
