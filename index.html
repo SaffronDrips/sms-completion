@@ -9,7 +9,11 @@
 <body class="container mt-5">
 
     <h1 class="mb-4">SMS Signature Requests Report</h1>
+    <br>
+</p>This tool will calculate the completion rate of Signature Requests delivered via SMS within the specified date range. It does not include any data for non-sms based requests.</p>
+</p>This is an open-source tool that is not backed by any entity or assurances. Use it at your own discretion.</p>
 
+<hr>
     <div class="mb-3">
         <label for="apiKey" class="form-label">API Key:</label>
         <input type="password" id="apiKey" class="form-control" placeholder="Enter your API Key">
@@ -27,7 +31,9 @@
     </div>
     
     <button class="btn btn-success mb-4" onclick="generateReport()">Generate Report</button>
-    
+    <br>
+    <hr>
+    <br>
     <h2>Completion Rate: <span id="completionRate">0%</span></h2>
     <br>
     <button class="btn btn-primary mt-4" onclick="downloadCSV()">Download CSV</button>
