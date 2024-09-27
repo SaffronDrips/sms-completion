@@ -81,7 +81,7 @@
             SMS_requests = []; // Reset before loading new data
 
             while (true) {
-                const response = await fetch(`https://api.hellosign.com/v3/signature_request/list?page=${page}&page_size=100&query=${dateRange}`, {
+                const response = await fetch(`https://api.hellosign.com/v3/signature_request/list?page=${page}&page_size=100&account_id=all&query=${dateRange}`, {
                     headers: {
                         'Authorization': 'Basic ' + btoa(apiKey + ':')
                     }
