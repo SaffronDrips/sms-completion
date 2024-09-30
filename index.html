@@ -94,7 +94,7 @@
                 }
 
                 const data = await response.json();
-
+                console.log(data);
                 data.signature_requests.forEach(request => {
                     request.signatures.forEach(signer => {
                         if (signer.has_sms_delivery) {
